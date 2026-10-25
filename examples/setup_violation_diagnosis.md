@@ -1,0 +1,3 @@
+1. The biggest contributor is `u_ctrl/_0418_` (nand2_1) driving the 32-fanout net `sel_hit`: it costs 1.05 ns on its own, 26% of the 3.98 ns data path, and its 1.31 ns output slew also slows the next stage `_1123_` (nor2_1) to 0.44 ns.
+2. Second is a chain of four back-to-back buf_1 cells (`_1124_` to `_1127_`) that adds 0.70 ns with no logic, while the clock is not the main problem: launch latency 0.32 ns vs capture 0.24 ns gives only 0.08 ns of skew against the path.
+3. Fix first by upsizing or cloning `_0418_` to split its 32 loads and removing the buffer chain; together they account for 1.75 ns, about four times the 0.43 ns violation, so even partial recovery should close the path.
