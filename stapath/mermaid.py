@@ -40,7 +40,7 @@ def render(p: Path) -> str:
         ids = []
         L.append(f'  subgraph {name}["{title}"]')
         L.append("    direction LR")
-        clk = [s for s in stages if not s.pin.endswith("/CLK") and s.cell not in ("in",)]
+        clk = [s for s in stages if s.instance not in (p.startpoint, p.endpoint) and s.cell not in ("in",)]
         if not clk:
             L.append(f'    {name}0["ideal clock"]'); ids.append(f"{name}0")
         for k, s in enumerate(clk):
@@ -71,7 +71,7 @@ def render(p: Path) -> str:
             if s.fanout and s.fanout > 8: extra.append(f"fanout {s.fanout}")
             if s.slew >= 0.5: extra.append(f"slew {s.slew:.3f}")
             tag = " · " + " · ".join(extra) if extra else ""
-            arc = " CLK→Q" if s.pin.endswith(("/Q", "/Q_N")) else ""
+            arc = " CK→Q" if s.instance == p.startpoint and s.pin.endswith(("/Q", "/QN", "/Q_N")) else ""
             if s is last and s.instance == p.endpoint and "/" in s.pin:
                 label = f"{s.pin} · endpoint<br/>{d:.3f} ns · {share:.0f}%"
             else:

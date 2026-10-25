@@ -20,6 +20,8 @@ A more detailed version with the full path diagram: [assets/llm_reads_timing.png
 | `stapath/mcp_server.py` | The same tools as an MCP server (`list_paths`, `path_summary`, `path_stages`, `path_mermaid`) |
 | `skills/sta-path-picture/` | A Claude Skill that tells the model to use the tools and how to write the three-sentence diagnosis |
 | `flow/` | OpenSTA script that produces every report here from OpenSTA's public gcd example |
+| `stapath/defparse.py`, `stapath/path3d.py` | DEF reader and the 3D path view on real placement and routing |
+| `designs/gcd_nangate45/` | Placed and routed gcd from OpenROAD's test data, with the scripts that time it |
 | `eval/` | 20 real paths, the task, the grader, raw model answers and graded results |
 | `PROMPT.md` | The original single-prompt version (v1) |
 
@@ -103,6 +105,30 @@ Diagnosis, written from the tool output:
 1. No single cell dominates (the largest, `_295_` o31ai_4, is 0.722 ns or 15% of the 4.776 ns data path), but five back-to-back maj3_2 cells `_215_` to `_219_` form a ripple-carry chain that costs 1.783 ns, 37% of the path.
 2. Clocks are ideal in this example, so skew plays no part; the second contributor is `_295_` driving fanout 11 with a 0.877 ns slew, followed by the `split1` buffer at 0.365 ns.
 3. Restructure the carry chain first (carry-lookahead or retiming): it targets 1.783 ns against a 0.935 ns violation, while upsizing `_295_` alone can recover at most 0.722 ns.
+
+## The path in 3D, on the real layout
+
+![Worst path in 3D](assets/path3d.png)
+
+The sky130 example has no placement data, so for this view I used a design that has it: OpenROAD's
+own test copy of gcd on Nangate45, **placed and routed** (`designs/gcd_nangate45`, sources listed
+there). The netlist is rebuilt from the DEF, wire load comes from the routed length on each layer
+times OpenROAD's Nangate45 layer capacitance, and the clock is propagated through the real clock tree.
+At 0.40 ns the worst path fails by 0.093 ns.
+
+In the picture, x and y are the real cell positions and wire coordinates in microns, height is the
+metal layer, and the signal wire is coloured by arrival time. The view makes one thing obvious that
+the text report hides: `_485_` drives a 48.6 µm net that runs all the way to the output pin
+`resp_msg[11]` before the path continues to `_712_`.
+
+Open `assets/path3d.html` in a browser to rotate it and hover cells.
+
+```bash
+OPENSTA=/path/to/OpenSTA sta -no_init -exit designs/gcd_nangate45/run_sta.tcl
+python3 -m stapath.path3d reports/gcd_nangate45_worst.rpt designs/gcd_nangate45/gcd_nangate45_route.def \
+    designs/gcd_nangate45/Nangate45.lef path3d.html
+python3 tools/render_3d.py path3d.html path3d.png 1600 1000      # static render (headless Chromium)
+```
 
 ## The experiment
 

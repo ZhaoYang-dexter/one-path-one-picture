@@ -1,0 +1,48 @@
+Startpoint: _708_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _712_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.061 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.061 ^ _708_/CK (DFF_X2)
+     4    9.229    0.015    0.124    0.185 ^ _708_/Q (DFF_X2)
+     2    7.685    0.029    0.044    0.229 ^ _379_/ZN (XNOR2_X2)
+     2    7.121    0.014    0.023    0.251 v _381_/ZN (NAND2_X2)
+     1    3.659    0.016    0.031    0.282 ^ _382_/ZN (NOR2_X2)
+     1    6.033    0.009    0.019    0.301 v _383_/ZN (NAND2_X2)
+     5   12.803    0.013    0.018    0.319 ^ _400_/ZN (NAND2_X4)
+     1    1.707    0.007    0.023    0.342 ^ rebuffer23/Z (BUF_X1)
+     1    2.065    0.013    0.018    0.360 v _479_/ZN (NAND3_X1)
+     2    4.451    0.016    0.023    0.383 ^ _480_/ZN (NAND2_X1)
+     1    1.810    0.009    0.015    0.398 v _483_/ZN (NAND2_X1)
+     1    2.354    0.011    0.016    0.414 ^ _484_/ZN (NAND2_X1)
+     2    5.320    0.035    0.047    0.461 ^ _485_/ZN (XNOR2_X1)
+     1    1.629    0.013    0.017    0.479 v _648_/ZN (NAND2_X1)
+     1    1.846    0.010    0.017    0.495 ^ _650_/ZN (NAND2_X1)
+     1    1.828    0.009    0.013    0.508 v _651_/ZN (NAND2_X1)
+     1    1.291    0.009    0.013    0.521 ^ _655_/ZN (NAND2_X1)
+                   0.009    0.000    0.521 ^ _712_/D (DFF_X1)
+                                     0.521   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.459 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _712_/CK (DFF_X1)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.030    0.428   library setup time
+                                     0.428   data required time
+---------------------------------------------------------------------------------
+                                     0.428   data required time
+                                    -0.521   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.093   slack (VIOLATED)
+
+

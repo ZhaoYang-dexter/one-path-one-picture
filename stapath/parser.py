@@ -127,22 +127,29 @@ def parse_report(text: str) -> list[Path]:
 
 # ---------- derived quantities (the "tools") ----------
 
+def _launch_clock_pin(p: Path):
+    """The startpoint's clock pin (CLK, CK, CP ...): first data arc, followed by the same instance's output."""
+    if len(p.data) >= 2 and p.data[0].instance == p.startpoint and p.data[1].instance == p.startpoint \
+            and "/" in p.data[0].pin:
+        return p.data[0]
+    return None
+
 def launch_latency(p: Path) -> float:
     """Clock arrival at the launching flop's clock pin, relative to the launch edge."""
-    if p.data and p.data[0].pin.endswith("/CLK"):
-        return round(p.data[0].time - p.launch_info.get("clock edge", 0.0), 3)
-    return 0.0
+    ck = _launch_clock_pin(p)
+    return round(ck.time - p.launch_info.get("clock edge", 0.0), 3) if ck else 0.0
 
 
 def capture_latency(p: Path) -> float:
     edge = p.capture_info.get("clock edge", 0.0)
-    clk_pins = [s for s in p.capture if s.pin.endswith("/CLK")]
+    clk_pins = [s for s in p.capture if s.instance == p.endpoint and "/" in s.pin]
     return round(clk_pins[-1].time - edge, 3) if clk_pins else 0.0
 
 
 def data_stages(p: Path) -> list[Stage]:
     """Stages after the startpoint (CLK->Q onward, or the input port onward)."""
-    return [s for s in p.data if not s.pin.endswith("/CLK")]
+    ck = _launch_clock_pin(p)
+    return [s for s in p.data if s is not ck]
 
 
 def cell_stages(p: Path) -> list[Stage]:
@@ -155,8 +162,9 @@ def cell_stages(p: Path) -> list[Stage]:
 
 def data_path_delay(p: Path) -> float:
     start = p.data[0].time - p.data[0].delay if p.data else 0.0
-    if p.data and p.data[0].pin.endswith("/CLK"):
-        start = p.data[0].time
+    ck = _launch_clock_pin(p)
+    if ck is not None:
+        start = ck.time
     return round(p.arrival - start, 3)
 
 

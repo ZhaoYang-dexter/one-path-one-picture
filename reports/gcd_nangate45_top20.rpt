@@ -1,0 +1,912 @@
+Startpoint: _708_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _712_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.061 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.061 ^ _708_/CK (DFF_X2)
+     4    9.229    0.015    0.124    0.185 ^ _708_/Q (DFF_X2)
+     2    7.685    0.029    0.044    0.229 ^ _379_/ZN (XNOR2_X2)
+     2    7.121    0.014    0.023    0.251 v _381_/ZN (NAND2_X2)
+     1    3.659    0.016    0.031    0.282 ^ _382_/ZN (NOR2_X2)
+     1    6.033    0.009    0.019    0.301 v _383_/ZN (NAND2_X2)
+     5   12.803    0.013    0.018    0.319 ^ _400_/ZN (NAND2_X4)
+     1    1.707    0.007    0.023    0.342 ^ rebuffer23/Z (BUF_X1)
+     1    2.065    0.013    0.018    0.360 v _479_/ZN (NAND3_X1)
+     2    4.451    0.016    0.023    0.383 ^ _480_/ZN (NAND2_X1)
+     1    1.810    0.009    0.015    0.398 v _483_/ZN (NAND2_X1)
+     1    2.354    0.011    0.016    0.414 ^ _484_/ZN (NAND2_X1)
+     2    5.320    0.035    0.047    0.461 ^ _485_/ZN (XNOR2_X1)
+     1    1.629    0.013    0.017    0.479 v _648_/ZN (NAND2_X1)
+     1    1.846    0.010    0.017    0.495 ^ _650_/ZN (NAND2_X1)
+     1    1.828    0.009    0.013    0.508 v _651_/ZN (NAND2_X1)
+     1    1.291    0.009    0.013    0.521 ^ _655_/ZN (NAND2_X1)
+                   0.009    0.000    0.521 ^ _712_/D (DFF_X1)
+                                     0.521   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.459 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _712_/CK (DFF_X1)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.030    0.428   library setup time
+                                     0.428   data required time
+---------------------------------------------------------------------------------
+                                     0.428   data required time
+                                    -0.521   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.093   slack (VIOLATED)
+
+
+Startpoint: _708_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _715_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.061 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.061 ^ _708_/CK (DFF_X2)
+     4    9.229    0.015    0.124    0.185 ^ _708_/Q (DFF_X2)
+     2    7.685    0.029    0.044    0.229 ^ _379_/ZN (XNOR2_X2)
+     2    7.121    0.014    0.023    0.251 v _381_/ZN (NAND2_X2)
+     1    3.659    0.016    0.031    0.282 ^ _382_/ZN (NOR2_X2)
+     1    6.033    0.009    0.019    0.301 v _383_/ZN (NAND2_X2)
+     5   12.803    0.013    0.018    0.319 ^ _400_/ZN (NAND2_X4)
+     1    3.184    0.010    0.017    0.336 v _414_/ZN (NAND2_X1)
+     3    4.991    0.012    0.017    0.353 ^ _427_/ZN (NAND2_X2)
+     1    1.854    0.008    0.014    0.367 v _433_/ZN (NAND2_X1)
+     2    4.513    0.016    0.021    0.388 ^ _439_/ZN (NAND2_X1)
+     1    3.575    0.027    0.045    0.432 ^ _490_/ZN (XNOR2_X1)
+     2    2.490    0.007    0.008    0.440 v _491_/ZN (INV_X2)
+     1    1.625    0.006    0.028    0.468 v _669_/ZN (AND2_X1)
+     1    2.014    0.020    0.027    0.495 ^ _671_/ZN (OAI21_X1)
+     1    1.316    0.008    0.014    0.509 v _675_/ZN (NAND2_X1)
+                   0.008    0.000    0.509 v _715_/D (DFF_X2)
+                                     0.509   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.458 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.458 ^ _715_/CK (DFF_X2)
+                            0.000    0.458   clock reconvergence pessimism
+                           -0.039    0.419   library setup time
+                                     0.419   data required time
+---------------------------------------------------------------------------------
+                                     0.419   data required time
+                                    -0.509   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.090   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _703_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    2.169    0.023    0.019    0.483 v _607_/ZN (AOI22_X1)
+     1    1.302    0.027    0.031    0.514 ^ _611_/ZN (OAI22_X1)
+                   0.027    0.000    0.514 ^ _703_/D (DFF_X1)
+                                     0.514   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.461 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.461 ^ _703_/CK (DFF_X1)
+                            0.000    0.461   clock reconvergence pessimism
+                           -0.035    0.426   library setup time
+                                     0.426   data required time
+---------------------------------------------------------------------------------
+                                     0.426   data required time
+                                    -0.514   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.088   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _709_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    1.788    0.023    0.018    0.482 v _634_/ZN (AOI22_X1)
+     1    1.275    0.027    0.031    0.513 ^ _637_/ZN (OAI22_X1)
+                   0.027    0.000    0.513 ^ _709_/D (DFF_X2)
+                                     0.513   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _709_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.034    0.425   library setup time
+                                     0.425   data required time
+---------------------------------------------------------------------------------
+                                     0.425   data required time
+                                    -0.513   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.088   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _707_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    1.688    0.023    0.018    0.481 v _624_/ZN (AOI22_X1)
+     1    1.289    0.027    0.031    0.512 ^ _628_/ZN (OAI22_X1)
+                   0.027    0.000    0.512 ^ _707_/D (DFF_X2)
+                                     0.512   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _707_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.034    0.425   library setup time
+                                     0.425   data required time
+---------------------------------------------------------------------------------
+                                     0.425   data required time
+                                    -0.512   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.088   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _704_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    1.859    0.023    0.018    0.482 v _612_/ZN (AOI22_X1)
+     1    1.383    0.028    0.031    0.513 ^ _615_/ZN (OAI22_X1)
+                   0.028    0.000    0.513 ^ _704_/D (DFF_X1)
+                                     0.513   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.461 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.461 ^ _704_/CK (DFF_X1)
+                            0.000    0.461   clock reconvergence pessimism
+                           -0.035    0.426   library setup time
+                                     0.426   data required time
+---------------------------------------------------------------------------------
+                                     0.426   data required time
+                                    -0.513   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.088   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _702_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    1.736    0.023    0.018    0.482 v _603_/ZN (AOI22_X1)
+     1    1.289    0.027    0.031    0.512 ^ _606_/ZN (OAI22_X1)
+                   0.027    0.000    0.512 ^ _702_/D (DFF_X2)
+                                     0.512   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.461 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.461 ^ _702_/CK (DFF_X2)
+                            0.000    0.461   clock reconvergence pessimism
+                           -0.034    0.427   library setup time
+                                     0.427   data required time
+---------------------------------------------------------------------------------
+                                     0.427   data required time
+                                    -0.512   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.086   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _716_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+    16   40.172    0.061    0.077    0.442 ^ _594_/ZN (AOI21_X4)
+     1    1.829    0.015    0.027    0.469 v _676_/ZN (NAND3_X1)
+     1    1.962    0.010    0.018    0.487 ^ _678_/ZN (NAND2_X1)
+     1    1.655    0.009    0.013    0.500 v _679_/ZN (NAND2_X1)
+     1    1.302    0.009    0.013    0.513 ^ _681_/ZN (NAND2_X1)
+                   0.009    0.000    0.513 ^ _716_/D (DFF_X1)
+                                     0.513   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.458 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.458 ^ _716_/CK (DFF_X1)
+                            0.000    0.458   clock reconvergence pessimism
+                           -0.030    0.427   library setup time
+                                     0.427   data required time
+---------------------------------------------------------------------------------
+                                     0.427   data required time
+                                    -0.513   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.085   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _713_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    1.762    0.018    0.018    0.482 v _659_/ZN (AOI22_X1)
+     1    1.291    0.017    0.028    0.510 ^ _660_/ZN (OAI21_X1)
+                   0.017    0.000    0.510 ^ _713_/D (DFF_X1)
+                                     0.510   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.458 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.458 ^ _713_/CK (DFF_X1)
+                            0.000    0.458   clock reconvergence pessimism
+                           -0.032    0.425   library setup time
+                                     0.425   data required time
+---------------------------------------------------------------------------------
+                                     0.425   data required time
+                                    -0.510   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.085   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _714_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+    16   40.172    0.061    0.077    0.442 ^ _594_/ZN (AOI21_X4)
+     1    1.576    0.013    0.019    0.461 v _661_/ZN (NAND2_X1)
+     1    1.916    0.019    0.023    0.484 ^ _663_/ZN (OAI21_X1)
+     1    1.779    0.009    0.016    0.499 v _664_/ZN (NAND2_X1)
+     1    1.322    0.009    0.013    0.513 ^ _668_/ZN (NAND2_X1)
+                   0.009    0.000    0.513 ^ _714_/D (DFF_X1)
+                                     0.513   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.459 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _714_/CK (DFF_X1)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.030    0.428   library setup time
+                                     0.428   data required time
+---------------------------------------------------------------------------------
+                                     0.428   data required time
+                                    -0.513   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.084   slack (VIOLATED)
+
+
+Startpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _710_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.058 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.058 ^ _700_/CK (DFF_X1)
+     2    3.617    0.012    0.093    0.151 ^ _700_/Q (DFF_X1)
+     4    6.715    0.009    0.016    0.167 v _445_/ZN (INV_X1)
+     1    1.003    0.008    0.043    0.209 v _446_/ZN (OR2_X1)
+     3    5.116    0.009    0.034    0.244 v _448_/ZN (AND2_X1)
+     2    5.459    0.018    0.024    0.268 ^ _519_/ZN (NAND2_X1)
+     1    1.832    0.009    0.012    0.280 v _520_/ZN (NOR2_X1)
+     1    3.392    0.023    0.037    0.317 ^ _521_/ZN (NOR2_X1)
+     1    5.973    0.014    0.025    0.342 v _524_/ZN (OAI21_X2)
+     2   12.989    0.011    0.020    0.361 ^ _525_/ZN (INV_X4)
+     2   11.537    0.014    0.022    0.383 v _527_/ZN (NAND3_X4)
+     6   14.280    0.024    0.035    0.418 ^ _591_/ZN (NOR2_X4)
+     7   19.512    0.025    0.045    0.464 ^ split30/Z (BUF_X2)
+     1    2.057    0.018    0.019    0.483 v _641_/ZN (AOI22_X1)
+     1    1.222    0.017    0.028    0.511 ^ _642_/ZN (OAI21_X1)
+                   0.017    0.000    0.511 ^ _710_/D (DFF_X2)
+                                     0.511   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _710_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.032    0.428   library setup time
+                                     0.428   data required time
+---------------------------------------------------------------------------------
+                                     0.428   data required time
+                                    -0.511   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.083   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _705_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+    16   40.172    0.061    0.077    0.442 ^ _594_/ZN (AOI21_X4)
+     1    2.062    0.023    0.033    0.475 v _616_/ZN (AOI22_X1)
+     1    1.247    0.027    0.031    0.505 ^ _619_/ZN (OAI22_X1)
+                   0.027    0.000    0.505 ^ _705_/D (DFF_X2)
+                                     0.505   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _705_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.034    0.425   library setup time
+                                     0.425   data required time
+---------------------------------------------------------------------------------
+                                     0.425   data required time
+                                    -0.505   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.081   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _706_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+    16   40.172    0.061    0.077    0.442 ^ _594_/ZN (AOI21_X4)
+     1    1.903    0.023    0.032    0.474 v _620_/ZN (AOI22_X1)
+     1    1.247    0.027    0.031    0.505 ^ _623_/ZN (OAI22_X1)
+                   0.027    0.000    0.505 ^ _706_/D (DFF_X2)
+                                     0.505   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _706_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.034    0.425   library setup time
+                                     0.425   data required time
+---------------------------------------------------------------------------------
+                                     0.425   data required time
+                                    -0.505   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.080   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _701_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+    16   40.172    0.061    0.077    0.442 ^ _594_/ZN (AOI21_X4)
+     1    1.752    0.023    0.032    0.474 v _596_/ZN (AOI22_X1)
+     1    1.277    0.027    0.031    0.504 ^ _602_/ZN (OAI22_X1)
+                   0.027    0.000    0.504 ^ _701_/D (DFF_X1)
+                                     0.504   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.461 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.461 ^ _701_/CK (DFF_X1)
+                            0.000    0.461   clock reconvergence pessimism
+                           -0.035    0.426   library setup time
+                                     0.426   data required time
+---------------------------------------------------------------------------------
+                                     0.426   data required time
+                                    -0.504   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.078   slack (VIOLATED)
+
+
+Startpoint: _690_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: resp_msg[15] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.059 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _690_/CK (DFF_X2)
+     4   10.704    0.017    0.125    0.184 ^ _690_/Q (DFF_X2)
+     3    5.436    0.009    0.016    0.200 v _388_/ZN (INV_X1)
+     2    2.955    0.021    0.030    0.230 ^ _389_/ZN (NOR2_X1)
+     1    1.639    0.007    0.009    0.239 v _390_/ZN (INV_X1)
+     1    3.579    0.014    0.020    0.259 ^ _391_/ZN (NAND2_X1)
+     1    2.785    0.006    0.009    0.268 v _392_/ZN (NOR2_X2)
+     1    7.163    0.024    0.032    0.299 ^ _399_/ZN (NOR2_X2)
+     5   12.349    0.010    0.020    0.320 v _400_/ZN (NAND2_X4)
+     1    3.310    0.013    0.019    0.339 ^ _414_/ZN (NAND2_X1)
+     3    4.621    0.010    0.015    0.354 v _427_/ZN (NAND2_X2)
+     1    1.924    0.010    0.016    0.370 ^ _433_/ZN (NAND2_X1)
+     2    4.336    0.013    0.018    0.388 v _439_/ZN (NAND2_X1)
+     2    3.375    0.013    0.021    0.409 ^ _441_/ZN (NAND2_X1)
+     1    1.613    0.008    0.014    0.423 v _444_/ZN (NAND2_X1)
+     2    2.945    0.012    0.017    0.439 ^ _449_/ZN (NAND2_X1)
+     1    1.816    0.009    0.032    0.471 ^ _452_/ZN (AND2_X1)
+                   0.009    0.000    0.471 ^ resp_msg[15] (out)
+                                     0.471   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock network delay (propagated)
+                            0.000    0.400   clock reconvergence pessimism
+                            0.000    0.400   output external delay
+                                     0.400   data required time
+---------------------------------------------------------------------------------
+                                     0.400   data required time
+                                    -0.471   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.071   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _708_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+     2   12.972    0.015    0.026    0.391 ^ _527_/ZN (NAND3_X4)
+     6   13.152    0.009    0.013    0.404 v _591_/ZN (NOR2_X4)
+     1    4.372    0.008    0.031    0.435 v rebuffer32/Z (BUF_X1)
+     1    1.950    0.026    0.042    0.477 ^ _632_/ZN (AOI22_X1)
+     1    1.219    0.010    0.016    0.493 v _633_/ZN (OAI21_X1)
+                   0.010    0.000    0.493 v _708_/D (DFF_X2)
+                                     0.493   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+    11   16.923    0.013    0.029    0.461 ^ clkbuf_2_2__f_clk/Z (BUF_X4)
+                   0.013    0.000    0.461 ^ _708_/CK (DFF_X2)
+                            0.000    0.461   clock reconvergence pessimism
+                           -0.039    0.422   library setup time
+                                     0.422   data required time
+---------------------------------------------------------------------------------
+                                     0.422   data required time
+                                    -0.493   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.071   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _711_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+     2   12.972    0.015    0.026    0.391 ^ _527_/ZN (NAND3_X4)
+     6   13.152    0.009    0.013    0.404 v _591_/ZN (NOR2_X4)
+     4   11.648    0.007    0.027    0.431 v rebuffer33/Z (BUF_X4)
+     1    1.845    0.025    0.040    0.471 ^ _646_/ZN (AOI22_X1)
+     1    1.191    0.010    0.016    0.487 v _647_/ZN (OAI21_X1)
+                   0.010    0.000    0.487 v _711_/D (DFF_X2)
+                                     0.487   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.459 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _711_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.039    0.420   library setup time
+                                     0.420   data required time
+---------------------------------------------------------------------------------
+                                     0.420   data required time
+                                    -0.487   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.067   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _700_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+     2   12.972    0.015    0.026    0.391 ^ _527_/ZN (NAND3_X4)
+    32   66.616    0.033    0.047    0.437 v _528_/ZN (NAND2_X4)
+     1    1.975    0.014    0.025    0.462 ^ _588_/ZN (NAND2_X1)
+     1    1.291    0.015    0.019    0.481 v _589_/ZN (OAI21_X1)
+                   0.015    0.000    0.481 v _700_/D (DFF_X1)
+                                     0.481   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     7   11.796    0.010    0.026    0.458 ^ clkbuf_2_0__f_clk/Z (BUF_X4)
+                   0.010    0.000    0.458 ^ _700_/CK (DFF_X1)
+                            0.000    0.458   clock reconvergence pessimism
+                           -0.040    0.418   library setup time
+                                     0.418   data required time
+---------------------------------------------------------------------------------
+                                     0.418   data required time
+                                    -0.481   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.063   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _693_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+     2   12.972    0.015    0.026    0.391 ^ _527_/ZN (NAND3_X4)
+    32   66.616    0.033    0.047    0.437 v _528_/ZN (NAND2_X4)
+     1    1.952    0.014    0.025    0.462 ^ _563_/ZN (NAND2_X1)
+     1    1.195    0.015    0.018    0.480 v _564_/ZN (OAI21_X1)
+                   0.015    0.000    0.480 v _693_/D (DFF_X2)
+                                     0.480   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _693_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.041    0.418   library setup time
+                                     0.418   data required time
+---------------------------------------------------------------------------------
+                                     0.418   data required time
+                                    -0.480   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.062   slack (VIOLATED)
+
+
+Startpoint: _696_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _691_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.000    0.000   clock source latency
+     1    9.109    0.020    0.000    0.000 ^ clk (in)
+     4   19.032    0.014    0.032    0.032 ^ clkbuf_0_clk/Z (BUF_X4)
+     8   13.544    0.011    0.027    0.059 ^ clkbuf_2_1__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.059 ^ _696_/CK (DFF_X1)
+     3    6.910    0.019    0.101    0.159 ^ _696_/Q (DFF_X1)
+     3    4.945    0.007    0.011    0.171 v _401_/ZN (INV_X2)
+     2    2.850    0.012    0.016    0.187 ^ _402_/ZN (NAND2_X1)
+     2    5.186    0.016    0.041    0.228 ^ _405_/ZN (AND2_X1)
+     1    1.792    0.008    0.015    0.243 v _407_/ZN (NAND2_X1)
+     2    4.915    0.014    0.020    0.263 ^ _408_/ZN (INV_X1)
+     2    5.445    0.018    0.053    0.316 ^ _413_/ZN (AND3_X1)
+     1    7.053    0.007    0.024    0.340 ^ rebuffer25/Z (BUF_X4)
+     2   13.770    0.016    0.025    0.365 v _526_/ZN (NAND3_X4)
+     2   12.972    0.015    0.026    0.391 ^ _527_/ZN (NAND3_X4)
+    32   66.616    0.033    0.047    0.437 v _528_/ZN (NAND2_X4)
+     1    1.910    0.014    0.024    0.462 ^ _557_/ZN (NAND2_X1)
+     1    1.197    0.015    0.018    0.480 v _558_/ZN (OAI21_X1)
+                   0.015    0.000    0.480 v _691_/D (DFF_X2)
+                                     0.480   data arrival time
+
+                            0.400    0.400   clock core_clock (rise edge)
+                            0.000    0.400   clock source latency
+     1    9.109    0.020    0.000    0.400 ^ clk (in)
+     4   19.032    0.014    0.032    0.432 ^ clkbuf_0_clk/Z (BUF_X4)
+     9   14.065    0.011    0.027    0.459 ^ clkbuf_2_3__f_clk/Z (BUF_X4)
+                   0.011    0.000    0.459 ^ _691_/CK (DFF_X2)
+                            0.000    0.459   clock reconvergence pessimism
+                           -0.041    0.418   library setup time
+                                     0.418   data required time
+---------------------------------------------------------------------------------
+                                     0.418   data required time
+                                    -0.480   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.062   slack (VIOLATED)
+
+
