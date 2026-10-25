@@ -1,0 +1,53 @@
+%%{init: {"flowchart": {"wrappingWidth": 360}}}%%
+flowchart TB
+  subgraph LC["Launch clock · latency 0.000 ns"]
+    direction LR
+    LC0["ideal clock"]
+  end
+  subgraph DP["Data path · 4.776 ns · 15 cell stages"]
+    direction TB
+    D1["_414_ · dfxtp_4 CLK→Q<br/>0.324 ns · 7%"]
+    D2["_214_ · nor2b_4<br/>0.123 ns · 3%"]
+    D1 --> D2
+    D3["5 x maj3_2 chain · _215_ to _219_<br/>1.783 ns · 37%"]
+    D2 --> D3
+    D4["_222_ · o211ai_4<br/>0.248 ns · 5%"]
+    D3 --> D4
+    D5["_225_ · a311oi_4<br/>0.157 ns · 3%"]
+    D4 --> D5
+    D6["_228_ · o311ai_4<br/>0.338 ns · 7%"]
+    D5 --> D6
+    D7["_231_ · a311oi_4<br/>0.172 ns · 4%"]
+    D6 --> D7
+    D8["_292_ · o311a_2<br/>0.432 ns · 9%"]
+    D7 --> D8
+    D9["_295_ · o31ai_4 · fanout 11 · slew 0.877<br/>0.722 ns · 15%"]
+    D8 --> D9
+    D10["split1 · buf_4 · fanout 10<br/>0.365 ns · 8%"]
+    D9 --> D10
+    D11["_316_ · a221oi_1<br/>0.112 ns · 2%"]
+    D10 --> D11
+    D12["_418_/D · endpoint<br/>0.000 ns · 0%"]
+    D11 --> D12
+  end
+  subgraph CC["Capture clock · latency 0.000 ns"]
+    direction LR
+    CC0["ideal clock"]
+  end
+  S["slack −0.935 ns · VIOLATED<br/>required 3.841 · arrival 4.776"]
+  LC --> DP
+  DP --> S
+  CC --> S
+  classDef hot  fill:#fde2e1,stroke:#c0392b,color:#7a1d14,stroke-width:2px
+  classDef warm fill:#fff1d6,stroke:#d68910,color:#6e4a07
+  classDef cool fill:#eef1f4,stroke:#8a96a3,color:#2c3640
+  classDef clk  fill:#e6f0fb,stroke:#3b78c4,color:#163a63
+  classDef res fill:#c0392b,stroke:#333,color:#ffffff,stroke-width:2px
+  class D3 hot
+  class D9 warm
+  class D1,D2,D4,D5,D6,D7,D8,D10,D11,D12 cool
+  class LC0,CC0 clk
+  class S res
+  style LC fill:#f7f9fc,stroke:#b8c6d8
+  style CC fill:#f7f9fc,stroke:#b8c6d8
+  style DP fill:#fbfbfa,stroke:#c9ccd1

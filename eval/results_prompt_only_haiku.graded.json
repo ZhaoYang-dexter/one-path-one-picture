@@ -1,0 +1,343 @@
+{
+ "results": "eval/results_prompt_only_haiku.json",
+ "paths": 20,
+ "field_accuracy": {
+  "slack": 100.0,
+  "data_path_delay": 100.0,
+  "n_stages": 100.0,
+  "worst_stage": 100.0,
+  "worst_stage_delay": 100.0,
+  "worst_stage_share_pct": 100.0,
+  "max_fanout_stage": 90.0,
+  "max_fanout": 90.0,
+  "max_slew": 100.0
+ },
+ "overall_field_accuracy": 97.8,
+ "paths_fully_correct": 18,
+ "diagnosis_numbers_checked": 47,
+ "diagnosis_numbers_supported": 47,
+ "rows": [
+  {
+   "index": 0,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 1,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 2,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 3,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 4,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 5,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": false,
+    "max_fanout": false,
+    "max_slew": true
+   },
+   "wrong": {
+    "max_fanout_stage": [
+     [
+      "_225_"
+     ],
+     "_414_"
+    ],
+    "max_fanout": [
+     4,
+     3
+    ]
+   }
+  },
+  {
+   "index": 6,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 7,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": false,
+    "max_fanout": false,
+    "max_slew": true
+   },
+   "wrong": {
+    "max_fanout_stage": [
+     [
+      "_225_"
+     ],
+     "_414_"
+    ],
+    "max_fanout": [
+     4,
+     3
+    ]
+   }
+  },
+  {
+   "index": 8,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 9,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 10,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 11,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 12,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 13,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 14,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 15,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 16,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 17,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 18,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  },
+  {
+   "index": 19,
+   "correct": {
+    "slack": true,
+    "data_path_delay": true,
+    "n_stages": true,
+    "worst_stage": true,
+    "worst_stage_delay": true,
+    "worst_stage_share_pct": true,
+    "max_fanout_stage": true,
+    "max_fanout": true,
+    "max_slew": true
+   },
+   "wrong": {}
+  }
+ ]
+}

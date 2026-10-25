@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "stapath": {
+      "command": "python3",
+      "args": ["-m", "stapath.mcp_server"]
+    }
+  }
+}

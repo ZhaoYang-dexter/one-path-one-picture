@@ -1,46 +1,53 @@
 %%{init: {"flowchart": {"wrappingWidth": 360}}}%%
 flowchart TB
-  subgraph LC["Launch clock · latency 0.32 ns"]
+  subgraph LC["Launch clock · latency 0.320 ns"]
     direction LR
-    L1["clkbuf_0_clk<br/>clkbuf_16 · 0.10 ns"] --> L2["clkbuf_2_1__f_clk<br/>clkbuf_16 · 0.22 ns"]
+    LC1["clkbuf_0_clk<br/>clkbuf_16 · 0.100 ns"]
+    LC2["clkbuf_2_1__f_clk<br/>clkbuf_16 · 0.220 ns"]
+    LC1 --> LC2
   end
-
-  subgraph DP["Data path · 3.98 ns"]
+  subgraph DP["Data path · 3.980 ns · 12 cell stages"]
     direction TB
-    D1["state_reg[2] · dfxtp_1 CLK→Q<br/>0.38 ns"] --> D2["_0412_ · inv_1<br/>0.12 ns"]
-    D2 --> D3["_0418_ · nand2_1 · fanout 32<br/>1.05 ns · slew 1.31 ns"]
-    D3 --> D4["_1123_ · nor2_1<br/>0.44 ns"]
-    D4 --> D5["4 x buf_1 chain · _1124_ to _1127_<br/>0.70 ns"]
-    D5 --> D6["_1140_ · a21oi_1<br/>0.31 ns"]
-    D6 --> D7["_1141_ · o21ai_0<br/>0.27 ns"]
-    D7 --> D8["_1155_ · mux2_1<br/>0.36 ns"]
-    D8 --> D9["_1162_ · xor2_1<br/>0.29 ns"]
-    D9 --> D10["acc_reg[7]/D · wire<br/>0.06 ns"]
+    D1["u_ctrl/state_reg[2] · dfxtp_1 CLK→Q<br/>0.380 ns · 10%"]
+    D2["u_ctrl/_0412_ · inv_1<br/>0.120 ns · 3%"]
+    D1 --> D2
+    D3["u_ctrl/_0418_ · nand2_1 · fanout 32 · slew 1.310<br/>1.050 ns · 26%"]
+    D2 --> D3
+    D4["u_dp/_1123_ · nor2_1<br/>0.440 ns · 11%"]
+    D3 --> D4
+    D5["4 x buf_1 buffer chain · u_dp/_1124_ to u_dp/_1127_<br/>0.700 ns · 18%"]
+    D4 --> D5
+    D6["u_dp/_1140_ · a21oi_1<br/>0.310 ns · 8%"]
+    D5 --> D6
+    D7["u_dp/_1141_ · o21ai_0<br/>0.270 ns · 7%"]
+    D6 --> D7
+    D8["u_dp/_1155_ · mux2_1<br/>0.360 ns · 9%"]
+    D7 --> D8
+    D9["u_dp/_1162_ · xor2_1<br/>0.290 ns · 7%"]
+    D8 --> D9
+    D10["u_dp/acc_reg[7]/D · endpoint<br/>0.060 ns · 2%"]
+    D9 --> D10
   end
-
-  subgraph CC["Capture clock · latency 0.24 ns"]
+  subgraph CC["Capture clock · latency 0.240 ns"]
     direction LR
-    C1["clkbuf_0_clk<br/>clkbuf_16 · 0.10 ns"] --> C2["clkbuf_2_3__f_clk<br/>clkbuf_16 · 0.14 ns"]
+    CC1["clkbuf_0_clk<br/>clkbuf_16 · 0.100 ns"]
+    CC2["clkbuf_2_3__f_clk<br/>clkbuf_16 · 0.140 ns"]
+    CC1 --> CC2
   end
-
-  S["slack −0.43 ns · VIOLATED<br/>required 3.87 · arrival 4.30"]
-
+  S["slack −0.430 ns · VIOLATED<br/>required 3.870 · arrival 4.300"]
   LC --> DP
   DP --> S
   CC --> S
-
   classDef hot  fill:#fde2e1,stroke:#c0392b,color:#7a1d14,stroke-width:2px
   classDef warm fill:#fff1d6,stroke:#d68910,color:#6e4a07
   classDef cool fill:#eef1f4,stroke:#8a96a3,color:#2c3640
   classDef clk  fill:#e6f0fb,stroke:#3b78c4,color:#163a63
-  classDef slack fill:#c0392b,stroke:#7a1d14,color:#ffffff,stroke-width:2px
-
+  classDef res fill:#c0392b,stroke:#333,color:#ffffff,stroke-width:2px
   class D3 hot
   class D4,D5 warm
   class D1,D2,D6,D7,D8,D9,D10 cool
-  class L1,L2,C1,C2 clk
-  class S slack
-
+  class LC1,LC2,CC1,CC2 clk
+  class S res
   style LC fill:#f7f9fc,stroke:#b8c6d8
   style CC fill:#f7f9fc,stroke:#b8c6d8
   style DP fill:#fbfbfa,stroke:#c9ccd1
